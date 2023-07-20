@@ -106,7 +106,7 @@ export default function Calculator({
             <div className="bill-input-container">
               <input
                 className={`bill-input ${
-                  billInput !== "" ? "input-entered" : ""
+                  billInput !== "" ? "input-entered" : "" //Adding "input-entered" className to the bill input after making any input in it.
                 }`}
                 type="number"
                 placeholder="0"
@@ -121,7 +121,7 @@ export default function Calculator({
             <div className="tip-percent-container">
               <button
                 className={`percent-container _1 ${
-                  selectedPercentage === 5 ? "selected" : ""
+                  selectedPercentage === 5 ? "selected" : "" //Adding "selected" className when this percentage button is clicked.
                 }`}
                 onClick={() => {
                   handlePercentageClick(5);
@@ -132,7 +132,7 @@ export default function Calculator({
 
               <button
                 className={`percent-container _2 ${
-                  selectedPercentage === 10 ? "selected" : ""
+                  selectedPercentage === 10 ? "selected" : "" //Adding "selected" className when this percentage button is clicked.
                 }`}
                 onClick={() => {
                   handlePercentageClick(10);
@@ -142,7 +142,7 @@ export default function Calculator({
               </button>
               <button
                 className={`percent-container _3 ${
-                  selectedPercentage === 15 ? "selected" : ""
+                  selectedPercentage === 15 ? "selected" : "" //Adding "selected" className when this percentage button is clicked.
                 }`}
                 onClick={() => {
                   handlePercentageClick(15);
@@ -152,7 +152,7 @@ export default function Calculator({
               </button>
               <button
                 className={`percent-container _4 ${
-                  selectedPercentage === 25 ? "selected" : ""
+                  selectedPercentage === 25 ? "selected" : "" //Adding "selected" className when this percentage button is clicked.
                 }`}
                 onClick={() => {
                   handlePercentageClick(25);
@@ -162,7 +162,7 @@ export default function Calculator({
               </button>
               <button
                 className={`percent-container _5 ${
-                  selectedPercentage === 50 ? "selected" : ""
+                  selectedPercentage === 50 ? "selected" : "" //Adding "selected" className when this percentage button is clicked.
                 }`}
                 onClick={() => {
                   handlePercentageClick(50);
@@ -174,7 +174,7 @@ export default function Calculator({
                 type="number"
                 placeholder="Custom"
                 className={`percent-container _6 ${
-                  customPercentage !== "" ? "input-entered" : ""
+                  customPercentage !== "" ? "input-entered" : "" //Adding "input-entered" className to the customPercentage input after making any input in it.
                 }`}
                 onChange={handleCustomPercentageClick}
                 value={customPercentage}
@@ -190,8 +190,8 @@ export default function Calculator({
             <div className="people-input-container">
               <input
                 className={`people-input ${
-                  peopleInput !== "" ? "input-entered" : ""
-                } ${peopleInput === "0" ? "red-border" : ""}`}
+                  peopleInput !== "" ? "input-entered" : "" //Adding "input-entered" className to the people input after making any input in it.
+                } ${peopleInput === "0" ? "red-border" : ""}`} //Adding "red-border" className in case of typing 0 to the people input, for different styles of error.
                 type="number"
                 placeholder="0"
                 onChange={handlePeopleInput}
@@ -232,7 +232,7 @@ export default function Calculator({
             </p>
           </div>
           <button
-            className={`reset-btn ${disableReset ? "disabled-reset" : ""}`}
+            className={`reset-btn ${disableReset ? "disabled-reset" : ""}`} //Adding "disabled-reset" className when all of inputs are empty and none of percentage buttons is clicked.
             onClick={handleReset}
           >
             RESET
